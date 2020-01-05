@@ -1,6 +1,6 @@
 {
-  "title": "Liptan Testing",
-  "description": "HOHO Liptan Testing",
+  "title": "Kubeadm",
+  "description": "",
   "difficulty": "Beginner",
   "time": "1 hour",
   "details": {
@@ -21,6 +21,6 @@
     "uilayout": "terminal-terminal"
   },
   "backend": {
-    "imageid": "ubuntu1804"
+    "imageid": "bash-cluster2"
   }
 }
