@@ -1,13 +1,17 @@
 {
-  "title": "Kubeadm",
-  "description": "",
+  "title": "KubeCluster",
+  "description": "test",
   "difficulty": "Beginner",
-  "time": "1 hour",
+  "time": "60 minutes",
   "details": {
     "steps": [
       {
         "title": "Step 1",
         "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
       }
     ],
     "intro": {
@@ -18,9 +22,9 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-terminal"
+    "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "bash-cluster2"
+    "imageid": "kubernetes-cluster-running"
   }
 }
