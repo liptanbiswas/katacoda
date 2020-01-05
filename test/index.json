@@ -1,25 +1,13 @@
 {
-  "title": "test",
-  "description": "test",
+  "title": "Liptan Testing",
+  "description": "HOHO Liptan Testing",
   "difficulty": "Beginner",
-  "time": "2 hours",
+  "time": "1 hour",
   "details": {
     "steps": [
       {
         "title": "Step 1",
         "text": "step1.md"
-      },
-      {
-        "title": "Step 2",
-        "text": "step2.md"
-      },
-      {
-        "title": "Step 3",
-        "text": "step3.md"
-      },
-      {
-        "title": "Step 4",
-        "text": "step4.md"
       }
     ],
     "intro": {
@@ -29,7 +17,9 @@
       "text": "finish.md"
     }
   },
-  "environment": {},
+  "environment": {
+    "uilayout": "terminal-terminal"
+  },
   "backend": {
     "imageid": "ubuntu1804"
   }
