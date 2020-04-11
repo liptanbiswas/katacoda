@@ -1,7 +1,7 @@
 Easiest way to install elasticsearch is to just run the docker container with latest elasticsearch image.
 
 ```
-docker run -d -p 9200:9200 -p 9300:9300 \
+docker run -d -p 9200:9200 -p 9300:9300 --name elasticsearch \
 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.6.2
 ```{{execute}}
 

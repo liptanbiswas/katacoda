@@ -7,11 +7,11 @@
     "steps": [
       {
         "title": "Installation",
-        "text": "install.md"
+        "text": "install-elasticsearch.md"
       },
       {
         "title": "Instance Running?",
-        "text": "test.md"
+        "text": "test-elasticsearch.md"
       },
       {
         "title": "Indexing a Document",
@@ -22,16 +22,20 @@
         "text": "2.md"
       },
       {
-        "title": "Instance Running?",
+        "title": "Modifying a Document",
         "text": "3.md"
       },
       {
-        "title": "Instance Running?",
+        "title": "Deleting a Document",
         "text": "4.md"
       },
       {
-        "title": "Instance Running?",
-        "text": "5.md"
+        "title": "Installing Kibana",
+        "text": "install-kibana.md"
+      },
+      {
+        "title": "Using Kibana",
+        "text": "using-kibana.md"
       }
     ],
     "intro": {
