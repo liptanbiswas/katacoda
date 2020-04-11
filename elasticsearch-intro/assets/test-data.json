@@ -1,20 +1,4 @@
-{
-    "index": {}
-}
-{
-    "first_name": "Mohit",
-    "last_name": "Singh",
-    "gender": "female",
-    "level": "awesome",
-    "age": 34
-}
-{
-    "index": {}
-}
-{
-    "first_name": "Sajid",
-    "last_name": "Qureshi",
-    "gender": "male",
-    "level": "awesome",
-    "age": 45
-}
+{"index": {}}
+{"first_name": "Mohit","last_name": "Singh","gender": "female","level": "awesome","age": 34}
+{"index": {}}
+{"first_name": "Sajid","last_name": "Qureshi","gender": "male","level": "awesome","age": 45, "city": "Ahmadabad"}
