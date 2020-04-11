@@ -12,6 +12,26 @@
       {
         "title": "Instance Running?",
         "text": "test.md"
+      },
+      {
+        "title": "Indexing a Document",
+        "text": "1.md"
+      },
+      {
+        "title": "Instance Running?",
+        "text": "2.md"
+      },
+      {
+        "title": "Instance Running?",
+        "text": "3.md"
+      },
+      {
+        "title": "Instance Running?",
+        "text": "4.md"
+      },
+      {
+        "title": "Instance Running?",
+        "text": "5.md"
       }
     ],
     "intro": {
@@ -19,6 +39,14 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "test-data.json",
+          "target": "~"
+        }
+      ]
     }
   },
   "environment": {
