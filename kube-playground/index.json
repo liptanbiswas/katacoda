@@ -1,6 +1,6 @@
 {
-  "title": "Hello",
-  "description": "Hello World",
+  "title": "Kubernetes Playground",
+  "description": "You can break things here!!",
   "difficulty": "Beginner",
   "time": "2",
   "details": {
@@ -18,9 +18,9 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "terminal-terminal"
   },
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "kubernetes-cluster"
   }
 }
