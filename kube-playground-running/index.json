@@ -1,0 +1,17 @@
+{
+  "title": "Kubernetes Playground",
+  "description": "You can break things here!!",
+  "difficulty": "Beginner",
+  "time": "40 minutes",
+  "details": {
+    "steps": []
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "hideintro": true,
+    "hidefinish": true
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}

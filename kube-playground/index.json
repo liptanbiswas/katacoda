@@ -1,6 +1,6 @@
 {
-  "title": "Kubernetes Playground",
-  "description": "You can break things here!!",
+  "title": "Kubernetes Install and Play",
+  "description": "Install kubernetes using kubeadm and break things",
   "difficulty": "Beginner",
   "time": "2",
   "details": {
@@ -21,6 +21,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "kubernetes"
+    "imageid": "kubernetes-cluster:1.18"
   }
 }
