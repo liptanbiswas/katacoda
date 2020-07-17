@@ -4,6 +4,12 @@
   "difficulty": "Beginner",
   "time": "40 minutes",
   "details": {
+    "steps": [
+      {
+        "title": "Information",
+        "text": "step.md"
+      }
+    ]
   },
   "environment": {
     "uilayout": "terminal",
