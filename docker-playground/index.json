@@ -1,0 +1,22 @@
+{
+  "title": "Docker Playground",
+  "description": "Play with docker",
+  "difficulty": "Beginner",
+  "time": "2",
+  "details": {
+    "steps": [
+      {
+        "title": "Information",
+        "text": "step.md"
+      }
+    ]
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "hideintro": true,
+    "hidefinish": true
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
