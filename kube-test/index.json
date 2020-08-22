@@ -1,0 +1,26 @@
+{
+  "title": "Kubernetes Test",
+  "description": "Test your knowledge",
+  "difficulty": "Beginner",
+  "time": "40 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Objective 1",
+        "text": "step1.md",
+        "verify": "step1-verify.sh"
+      }
+    ]
+  },
+  "intro": {
+    "text": "intro.md",
+    "foreground": "launch.sh"
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "hidefinish": true
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}
