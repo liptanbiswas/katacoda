@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
 
-KUBECONFIG=/root/.kube/config kubectl get svc -A -o jsonpath="{.items[*].metadata.name}" | grep -q -E 'kubernetes.*kube-dns|kube-dns.*kubernetes'
+grep -q -E 'kubernetes.*kube-dns|kube-dns.*kubernetes' /root/all-services.txt
 echo "done"

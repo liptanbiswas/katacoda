@@ -1,5 +1,9 @@
-1.
-```
-kubectl run hello --image=busybox --restart=Never -- echo "Hello World"
+Solution
 
-```
+---
+
+1. `kubectl run hello --image=busybox --restart=Never -- echo "Hello World"`{{copy}}
+
+---
+<br/>
+<br/>
