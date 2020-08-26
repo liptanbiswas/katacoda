@@ -2,7 +2,7 @@ Solution
 
 ---
 
-1. `kubectl run nginx --image=nginx -n frontend`{{copy}}
+1. `kubectl run nginx --image=nginx -n frontend`{{execute}}
 
 ---
 <br/>

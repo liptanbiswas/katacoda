@@ -2,9 +2,11 @@ Solution
 
 ---
 
-1. `kubectl run myenv --image=alpine -- printenv`{{copy}}
-2. `kubectl logs myenv > /root/myenv.log`{{copy}}
-3. `kubectl delete po myenv`{{copy}}
+1. `kubectl run myenv --image=alpine -- printenv`{{execute}}
+
+2. `kubectl logs myenv > /root/myenv.log`{{execute}}
+
+3. `kubectl delete po myenv`{{execute}}
 
 ---
 <br/>
