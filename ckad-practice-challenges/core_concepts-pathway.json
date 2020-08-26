@@ -1,0 +1,12 @@
+{
+    "title": "CKAD Practice Challenges",
+    "description": "",
+    "icon": "fa-katacoda",
+    "courses": [
+        {
+            "course_id": "core-concepts",
+            "title": "Scenario with Terminal UI",
+            "description": "Practice Core Concepts of Kubernetes"
+        }
+    ]
+}
