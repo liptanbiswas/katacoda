@@ -5,7 +5,7 @@
     "courses": [
         {
             "course_id": "core-concepts",
-            "title": "Scenario with Terminal UI",
+            "title": "Core Concepts",
             "description": "Practice Core Concepts of Kubernetes"
         }
     ]
