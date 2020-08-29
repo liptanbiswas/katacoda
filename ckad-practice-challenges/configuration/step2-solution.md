@@ -3,6 +3,8 @@ Solution
 ---
 
 - Create spec file.
+
+
 ```
 cat << EOF > al-pod.yaml
 apiVersion: v1
@@ -28,6 +30,7 @@ spec:
 status: {}
 EOF
 ```{{execute}}
+
 - Create the pod.
 
 `kubectl apply -f al-pod.yaml`{{execute}}
