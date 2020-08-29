@@ -12,6 +12,11 @@
             "course_id": "configuration",
             "title": "Configuration",
             "description": "Practice configuration in Kubernetes"
+        },
+        {
+            "course_id": "multi-container-pods",
+            "title": "Multi-Container Pods",
+            "description": "Practice questions for Kubernetes Multi-container Pods"
         }
     ]
 }
