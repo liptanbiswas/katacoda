@@ -7,6 +7,11 @@
             "course_id": "core-concepts",
             "title": "Core Concepts",
             "description": "Practice Core Concepts of Kubernetes"
+        },
+        {
+            "course_id": "configuration",
+            "title": "Configuration",
+            "description": "Practice configuration in Kubernetes"
         }
     ]
 }
