@@ -17,6 +17,16 @@
             "course_id": "multi-container-pods",
             "title": "Multi-Container Pods",
             "description": "Practice questions for Kubernetes Multi-container Pods"
+        },
+        {
+            "course_id": "observability",
+            "title": "Observability",
+            "description": "Practice questions for Kubernetes Observability"
+        },
+        {
+            "course_id": "pod-design",
+            "title": "Pod Design",
+            "description": "Practice questions for Kubernetes Pod Design"
         }
     ]
 }
