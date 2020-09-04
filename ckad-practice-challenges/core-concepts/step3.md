@@ -2,11 +2,7 @@ Complete the following tasks.
 
 ---
 
-1. Create a Pod named `myenv`{{copy}} with command `printenv`{{copy}}. Use `alpine`{{copy}} image. Pod is allowed to go in CrashLoopBackoff.
-
-2. Save the logs of the pod to `/root/myenv.log`{{copy}} file.
-
-3. Delete `myenv`{{copy}} pod.
+1. Get list of all pods in `kube-system` namespace and write the output to `/root/kube-system-pods.txt`{{copy}} file.
 
 ---
 <br/>

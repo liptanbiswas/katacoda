@@ -1,0 +1,66 @@
+{
+  "title": "Observability",
+  "description": "Practice questions for Kubernetes Observability",
+  "difficulty": "Beginner",
+  "time": "30 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Objective 1",
+        "text": "step1.md",
+        "verify": "step1-verify.sh",
+        "foreground": "step1-foreground.sh",
+        "answer": "step1-solution.md"
+      },
+      {
+        "title": "Objective 2",
+        "text": "step2.md",
+        "verify": "step2-verify.sh",
+        "foreground": "step2-foreground.sh",
+        "answer": "step2-solution.md"
+      },
+      {
+        "title": "Objective 3",
+        "text": "step3.md",
+        "verify": "step3-verify.sh",
+        "foreground": "step3-foreground.sh",
+        "answer": "step3-solution.md"
+      },
+      {
+        "title": "Objective 4",
+        "text": "step4.md",
+        "verify": "step4-verify.sh",
+        "background": "step4-background.sh",
+        "foreground": "step4-foreground.sh",
+        "answer": "step4-solution.md"
+      },
+      {
+        "title": "Objective 5",
+        "text": "step5.md",
+        "verify": "step5-verify.sh",
+        "background": "step5-background.sh",
+        "foreground": "step5-foreground.sh",
+        "answer": "step5-solution.md"
+      },
+      {
+        "title": "Objective 6",
+        "text": "step6.md",
+        "verify": "step6-verify.sh",
+        "foreground": "step6-foreground.sh",
+        "answer": "step6-solution.md"
+      }
+    ]
+  },
+  "intro": {
+    "text": "intro.md"
+  },
+  "finish": {
+    "text": "finish.md"
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}

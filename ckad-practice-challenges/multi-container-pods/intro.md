@@ -1,5 +1,5 @@
 # CKAD Practice Questions
 
-## Core Concepts- 13%
+## Multi-Container Pods -10%
 
-Practice questions for Kubernetes core concepts.
+Practice questions for Kubernetes Multi-container Pods.

@@ -2,13 +2,7 @@ Solution
 
 ---
 
-1. `kubectl run myenv --image=alpine -- printenv`{{execute}}
-
-    Wait few seconds for pod to run.
-
-2. `kubectl logs myenv > /root/myenv.log`{{execute}}
-
-3. `kubectl delete po myenv`{{execute}}
+1. `kubectl get pods -n kube-system > /root/kube-system-pods.txt`{{execute}}
 
 ---
 <br/>

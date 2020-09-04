@@ -1,5 +1,7 @@
 #!/bin/bash
 set -e
-grep -q 'HOSTNAME=myenv' /root/myenv.log
-if KUBECONFIG=/root/.kube/config kubectl get po -o jsonpath="{.items[*].metadata.name}" | grep -q -w myenv ; then exit 1; fi
+
+grep -q -w 'coredns' /root/kube-system-pods.txt
+grep -q -w 'kube-apiserver-controlplane' /root/kube-system-pods.txt
+grep -q -w 'kube-scheduler-controlplane' /root/kube-system-pods.txt
 echo "done"
