@@ -1,0 +1,42 @@
+{
+    "title": "CKAD Practice Challenge",
+    "description": "",
+    "icon": "fa-katacoda",
+    "courses": [
+        {
+            "course_id": "core-concepts",
+            "title": "Core Concepts - 13%",
+            "description": "Practice Questions on Kubernetes Core Concepts"
+        },
+        {
+            "course_id": "configuration",
+            "title": "Configuration - 18%",
+            "description": "Practice Questions on Kubernetes Configuration"
+        },
+        {
+            "course_id": "multi-container-pods",
+            "title": "Multi-Container Pods - 10%",
+            "description": "Practice Questions on Kubernetes Multi-Container Pods"
+        },
+        {
+            "course_id": "observability",
+            "title": "Observability - 18%",
+            "description": "Practice Questions on Kubernetes Observability"
+        },
+        {
+            "course_id": "pod-design",
+            "title": "Pod Design - 20%",
+            "description": "Practice Questions on Kubernetes Pod Design"
+        },
+        {
+            "course_id": "service-network",
+            "title": "Services & Networking - 13%",
+            "description": "Practice Questions on Kubernetes Services & Networking"
+        },
+        {
+            "course_id": "state-persistence",
+            "title": "State Persistence - 8%",
+            "description": "Practice questions for Kubernetes State Persistence"
+        }
+    ]
+}

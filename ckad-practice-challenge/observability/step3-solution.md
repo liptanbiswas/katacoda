@@ -2,7 +2,7 @@ Solution
 
 ---
 
-1. `kubectl run myenv --image=alpine -- printenv`{{execute}}
+1. `kubectl run myenv --image=alpine -- sh -c "printenv && sleep 1h"`{{execute}}
 
     Wait few seconds for pod to run.
 
