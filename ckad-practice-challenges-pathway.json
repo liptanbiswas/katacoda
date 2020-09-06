@@ -27,6 +27,16 @@
             "course_id": "pod-design",
             "title": "Pod Design",
             "description": "Practice questions for Kubernetes Pod Design"
+        },
+        {
+            "course_id": "service-network",
+            "title": "Service Network",
+            "description": "Practice questions for Kubernetes Service Network"
+        },
+        {
+            "course_id": "state-persistence",
+            "title": "State Persistence",
+            "description": "Practice questions for Kubernetes State Persistence"
         }
     ]
 }
