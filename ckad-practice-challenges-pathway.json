@@ -30,8 +30,8 @@
         },
         {
             "course_id": "service-network",
-            "title": "Service Network",
-            "description": "Practice questions for Kubernetes Service Network"
+            "title": "Services & Networking",
+            "description": "Practice questions for Kubernetes Services and Networking"
         },
         {
             "course_id": "state-persistence",

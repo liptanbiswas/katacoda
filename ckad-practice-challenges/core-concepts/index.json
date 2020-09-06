@@ -1,8 +1,6 @@
 {
-  "title": "Core Concepts",
+  "title": "Core Concepts - 13%",
   "description": "Practice questions for Kubernetes core concepts",
-  "difficulty": "Beginner",
-  "time": "30 minutes",
   "details": {
     "steps": [
       {
