@@ -1,7 +1,15 @@
 {
   "title": "Core Concepts - 13%",
   "description": "Practice questions for Kubernetes core concepts",
+  "difficulty": "Beginner",
+  "time": "30 minutes",
   "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
     "steps": [
       {
         "title": "Objective 1",
@@ -46,12 +54,7 @@
         "answer": "step6-solution.md"
       }
     ]
-  },
-  "intro": {
-    "text": "intro.md"
-  },
-  "finish": {
-    "text": "finish.md"
+
   },
   "environment": {
     "uilayout": "terminal"
