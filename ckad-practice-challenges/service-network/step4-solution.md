@@ -24,7 +24,7 @@ EOF
 
 Apply the spec file.
 
-`kubectl apply -f geonosis-shield.yaml`
+`kubectl apply -f geonosis-shield.yaml`{{execute}}
 
 
 ---

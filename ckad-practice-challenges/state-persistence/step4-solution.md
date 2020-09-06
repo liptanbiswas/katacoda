@@ -34,7 +34,7 @@ EOF
 
 Apply the spec file.
 
-`kubectl apply -f dooku-pod.yaml`
+`kubectl apply -f dooku-pod.yaml`{{execute}}
 
 
 ---
