@@ -1,6 +1,6 @@
 {
     "title": "CKAD Practice Challenge",
-    "description": "Practice Questions on CNCF Certified Kubernetes Application Developer Exam",
+    "description": "Practice Questions for CNCF Certified Kubernetes Application Developer Exam",
     "icon": "fa-katacoda",
     "courses": [
         {
