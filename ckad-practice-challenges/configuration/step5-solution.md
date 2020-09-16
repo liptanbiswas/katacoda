@@ -2,9 +2,13 @@ Solution
 
 ---
 
-1. `kubectl create secret generic db-secret --from-literal='MYSQL_ROOT_PASSWORD=YoYoSecret' --from-literal='MYSQL_PASSWORD=XoXoPassword'`{{execute}}
+1.
 
-2. `kubectl create configmap db-config --from-literal='MYSQL_USER=k8s' --from-literal='MYSQL_DATABASE=newdb'`{{execute}}
+`kubectl create secret generic db-secret --from-literal='MYSQL_ROOT_PASSWORD=YoYoSecret' --from-literal='MYSQL_PASSWORD=XoXoPassword'`{{execute}}
+
+2.
+
+`kubectl create configmap db-config --from-literal='MYSQL_USER=k8s' --from-literal='MYSQL_DATABASE=newdb'`{{execute}}
 
 3. Create spec file.
 
