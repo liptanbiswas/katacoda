@@ -15,13 +15,13 @@
     "assets": {
       "host01": [
         {
-          "file": "upgrade-1.19.sh",
-          "target": "/usr/local/bin/",
+          "file": "k8s-upgrade-1.19.sh",
+          "target": "/usr/bin/",
           "chmod": "+x"
         },
         {
           "file": "upgrade.sh",
-          "target": "/usr/local/bin/",
+          "target": "/usr/bin/",
           "chmod": "+x"
         }
       ]
