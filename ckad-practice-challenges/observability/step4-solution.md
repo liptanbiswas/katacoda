@@ -6,7 +6,7 @@ Describe the pod.
 
 `kubectl describe pod tatooine`{{execute}}
 
-Fix the typo in command. Since `command` and `args` both fields are immutable, you will need to export the pod's spec to yaml and recreate the pod.
+Fix the typo in command. Since **command** or **args** both fields are immutable, you will need to export the pod's spec to yaml and recreate the pod.
 
 Get the yaml of pod.
 
