@@ -8,8 +8,8 @@
       {
         "title": "Information",
         "text": "step.md",
-        "background": "upgrade-1.19.sh",
-        "foreground": "upgrade.sh"
+        "background": "step1-background.sh",
+        "foreground": "step1-foreground.sh"
       }
     ],
     "assets": {
