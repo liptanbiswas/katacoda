@@ -16,12 +16,12 @@
       "host01": [
         {
           "file": "upgrade-1.19.sh",
-          "target": "/usr/local/bin/",
+          "target": "/usr/local/bin/upgrade-1.19.sh",
           "chmod": "+x"
         },
         {
           "file": "upgrade.sh",
-          "target": "/usr/local/bin/",
+          "target": "/usr/local/bin/upgrade.sh",
           "chmod": "+x"
         }
       ]
