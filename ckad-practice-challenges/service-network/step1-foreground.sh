@@ -1,3 +1,3 @@
 #!/bin/bash
 
-launch.sh
+sleep 5 && upgrade.sh

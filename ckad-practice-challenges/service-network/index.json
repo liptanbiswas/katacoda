@@ -16,6 +16,7 @@
         "text": "step1.md",
         "verify": "step1-verify.sh",
         "foreground": "step1-foreground.sh",
+        "background": "step1-background.sh",
         "answer": "step1-solution.md"
       },
       {
@@ -42,7 +43,21 @@
         "foreground": "step4-foreground.sh",
         "answer": "step4-solution.md"
       }
-    ]
+    ],
+    "assets": {
+      "host01": [
+        {
+          "file": "k8s-upgrade-1.19.sh",
+          "target": "/usr/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "upgrade.sh",
+          "target": "/usr/bin/",
+          "chmod": "+x"
+        }
+      ]
+    }
   },
   "intro": {
     "text": "intro.md"
