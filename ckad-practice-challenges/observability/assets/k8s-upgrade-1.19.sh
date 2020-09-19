@@ -16,9 +16,9 @@ do
     sleep 1
 done
 
+kubeadm upgrade apply 1.19.0 --yes >>/tmp/master-upgrade.log 2>&1
+
 # Upgrade node in background
 ssh node01 'kubeadm upgrade node' >>/tmp/node-upgrade.log 2>&1 &
-
-kubeadm upgrade apply 1.19.0 --yes >>/tmp/master-upgrade.log 2>&1
 
 touch /root/.kube/upgraded
