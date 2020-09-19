@@ -1,8 +1,8 @@
 ### Objectives
-• Understand Deployments and how to perform rolling updates
-• Understand Deployments and how to perform rollbacks
-• Understand Jobs and CronJobs
-• Understand how to use Labels, Selectors, and Annotations
+- Understand Deployments and how to perform rolling updates
+- Understand Deployments and how to perform rollbacks
+- Understand Jobs and CronJobs
+- Understand how to use Labels, Selectors, and Annotations
 
 ### Instructions
 - This practice environment runs on Kubernetes 1.19, current version of exam.
