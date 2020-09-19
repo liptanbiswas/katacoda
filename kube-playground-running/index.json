@@ -7,9 +7,25 @@
     "steps": [
       {
         "title": "Information",
-        "text": "step.md"
+        "text": "step.md",
+        "background": "upgrade-1.19.sh",
+        "foreground": "upgrade.sh"
       }
-    ]
+    ],
+    "assets": {
+      "host01": [
+        {
+          "file": "upgrade-1.19.sh",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "upgrade.sh",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        }
+      ]
+    }
   },
   "environment": {
     "uilayout": "terminal",
@@ -17,6 +33,6 @@
     "hidefinish": true
   },
   "backend": {
-    "imageid": "kubernetes-cluster-running:1.19"
+    "imageid": "kubernetes-cluster-running:1.18"
   }
 }
