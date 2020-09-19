@@ -3,7 +3,7 @@
 - Create and configure basic Pods
 
 ### Instructions
-- This practice environment runs on Kubernetes 1.18 but it is 100% compatible with Kubernetes 1.19.
+- This practice environment runs on Kubernetes 1.19, current version of exam.
 - This is NOT a replica of actual exam and should be used for practice only.
 - The questions are NOT same as actual exam.
 - You will need to complete all tasks of a question before pressing the **Continue** button.
