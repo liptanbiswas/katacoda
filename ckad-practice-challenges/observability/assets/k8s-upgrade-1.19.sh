@@ -16,7 +16,7 @@ do
     sleep 1
 done
 
-kubeadm upgrade apply 1.19.0 --yes --ignore-preflight-errors=all >>/tmp/master-upgrade.log 2>&1
+kubekubeadm upgrade apply 1.19.0 --yes --ignore-preflight-errors=all >>/tmp/master-upgrade.log 2>&1
 
 # Upgrade node in background
 ssh node01 'kubeadm upgrade node' >>/tmp/node-upgrade.log 2>&1 &
