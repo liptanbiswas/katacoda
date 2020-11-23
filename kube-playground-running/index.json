@@ -7,9 +7,14 @@
     "steps": [
       {
         "title": "Information",
-        "text": "step.md",
+        "text": "step1.md",
         "background": "step1-background.sh",
-        "foreground": "step1-foreground.sh"
+        "foreground": "step1-foreground.sh",
+        "verify": "step1-verify.sh"
+      },
+      {
+        "title": "Information",
+        "text": "step2.md"
       }
     ],
     "assets": {
