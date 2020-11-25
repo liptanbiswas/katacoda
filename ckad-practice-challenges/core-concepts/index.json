@@ -67,7 +67,7 @@
           "chmod": "+x"
         },
         {
-          "file": "check.py",
+          "file": "check",
           "target": "/usr/bin/",
           "chmod": "+x"
         }
