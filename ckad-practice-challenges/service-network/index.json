@@ -38,6 +38,11 @@
         "background": "step4-background.sh",
         "foreground": "step4-foreground.sh",
         "answer": "step4-solution.md"
+      },
+      {
+        "title": "Results",
+        "text": "step5.md",
+        "foreground": "step5-foreground.sh"
       }
     ],
     "assets": {
@@ -49,6 +54,11 @@
         },
         {
           "file": "upgrade.sh",
+          "target": "/usr/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "check",
           "target": "/usr/bin/",
           "chmod": "+x"
         }

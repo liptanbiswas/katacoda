@@ -1,0 +1,44 @@
+#!/usr/bin/python3
+
+# These tests were initially written in bash but due to some change in Katacoda, they stopped working.
+# Migrated those bash to a python script.
+#
+import subprocess
+
+
+class bcolors:
+    OKGREEN = '\033[92m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+
+
+def check_cmd(command, test):
+    s = subprocess.run(command, shell=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    if s.returncode == 0:
+        print(test + f" {bcolors.OKGREEN}Passed{bcolors.ENDC}")
+    else:
+        print(test + f"{bcolors.FAIL} Failed{bcolors.ENDC}")
+
+
+print("\nQuestion 1:")
+check_cmd("kubectl get pod ig-11 -o jsonpath='{.spec.containers[0].image}' | grep -q -w 'nginx'", "Pod ig-11 is created with correct image?")
+check_cmd("kubectl get pod ig-11 -o jsonpath='{.spec.containers[0].ports[0].containerPort'} | grep -q -w '80'", "Pod ig-11 has container port 80 exposed?")
+
+print("\nQuestion 2:")
+check_cmd(
+    "kubectl exec ig-11 -- curl greef:8080 --connect-timeout 1", "Pod ig-11 is exposed as a service greef?")
+check_cmd(
+    "kubectl get services greef -o jsonpath='{.spec.type}' | grep -q -w ClusterIP", "Service greef is ClusterIP type?")
+
+print("\nQuestion 3:")
+check_cmd(
+    "kubectl get service cara -o jsonpath='{.spec.ports[0].nodePort}' | grep -q -w 31888", "Service cara as NodePort exposed?")
+check_cmd(
+    "curl localhost:31888 --connect-timeout 2", "Service is available via NodePort?")
+
+print("\nQuestion 4:")
+check_cmd(
+    "kubectl get networkpolicy geonosis-shield -o jsonpath='{.spec.podSelector.matchLabels.sector}' | grep -q -w arkanis", "Network policy geonosis-shield selects correct service?")
+check_cmd(
+    "kubectl get networkpolicy geonosis-shield -o jsonpath='{.spec.ingress[0].from[0].podSelector.matchLabels.empire}' | grep -q -w true", "Network policy geonosis-shield accpets connections from correct pods only?")

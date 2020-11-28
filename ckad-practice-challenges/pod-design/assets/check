@@ -1,0 +1,62 @@
+#!/usr/bin/python3
+
+# These tests were initially written in bash but due to some change in Katacoda, they stopped working.
+# Migrated those bash to a python script
+#
+import subprocess
+
+
+class bcolors:
+    OKGREEN = '\033[92m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+
+
+def check_cmd(command, test):
+    s = subprocess.run(command, shell=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    if s.returncode == 0:
+        print(test + f" {bcolors.OKGREEN}Passed{bcolors.ENDC}")
+    else:
+        print(test + f"{bcolors.FAIL} Failed{bcolors.ENDC}")
+
+
+print("\nQuestion 1:")
+check_cmd("kubectl get deploy hoth -n planets -o jsonpath='{.spec.template.spec.containers[*].image}' | grep -q -w 'httpd:2.4.46'", "Deployment hoth uses httpd:2.4.46 image?")
+check_cmd("kubectl get deploy hoth -n planets -o jsonpath='{.status.readyReplicas}' | grep -q -w 4", "Deployment hoth has 4 running pods?")
+
+print("\nQuestion 2:")
+check_cmd(
+    "kubectl rollout status deploy yavin --timeout=1s", "Deployment yavin is rolled back?")
+check_cmd(
+    "kubectl apply -f /root/yavin.json --dry-run=client -o jsonpath='{.status.readyReplicas}' | grep -q -w 1", "File /root/yavin.json contains deployment spec in JSON?")
+
+print("\nQuestion 3:")
+check_cmd(
+    "kubectl get hpa naboo -o jsonpath='{.spec.targetCPUUtilizationPercentage}' | grep -q -w 80", "HPA naboo scales at 80% CPU?")
+check_cmd(
+    "kubectl get hpa naboo -o jsonpath='{.spec.minReplicas}' | grep -q -w 2", "HPA naboo has 2 minimum replicas?")
+check_cmd(
+    "kubectl get hpa naboo -o jsonpath='{.spec.maxReplicas}' | grep -q -w 5", "HPA naboo has 5 maximum replicas?")
+
+print("\nQuestion 4:")
+check_cmd(
+    "kubectl get cronjob bespin -o jsonpath='{.spec.schedule}' | grep -q -w '*/5 * * * *'", "Cronjob bespin is scheduled for every 5 min?")
+check_cmd(
+    "kubectl get cronjob bespin -o jsonpath='{.spec.jobTemplate.spec.template.spec.containers[*].command}' | grep -q -w 'date'", "Cronjob bespin is running with date command?")
+
+print("\nQuestion 5:")
+check_cmd(
+    "kubectl get nodes node01 -o jsonpath={'.metadata.labels.shuttle'} | grep -q -w 'true'", "Correct label is applied on node01?")
+check_cmd(
+    "if kubectl get nodes node01 -o jsonpath={'.metadata.annotations'} | grep -q flagship; then exit 1; fi", "Correct annotation is removed from node01?")
+
+print("\nQuestion 6:")
+check_cmd(
+    "grep -q -w 'anakin,busybox' /root/jedi-true.txt", "File /root/jedi-true.txt contains correct output?")
+check_cmd(
+    "grep -q -w 'luke,redis' /root/jedi-true.txt", "File /root/jedi-true.txt contains correct output?")
+check_cmd(
+    "grep -q -w 'padme,busybox' /root/jedi-true.txt", "File /root/jedi-true.txt contains correct output?")
+check_cmd(
+    "if grep -q -w 'han,busybox' /root/jedi-true.txt; then exit 1; fi", "File /root/jedi-true.txt contains correct output?")

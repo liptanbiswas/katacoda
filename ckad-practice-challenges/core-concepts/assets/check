@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+
+# These tests were initially written in bash but due to some change in Katacoda, they stopped working.
+# Migrated those bash to a python script.
+#
 import subprocess
 
 

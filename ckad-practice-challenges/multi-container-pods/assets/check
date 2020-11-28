@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+import subprocess
+
+
+class bcolors:
+    OKGREEN = '\033[92m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+
+
+def check_cmd(command, test):
+    s = subprocess.run(command, shell=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    if s.returncode == 0:
+        print(test + f" {bcolors.OKGREEN}Passed{bcolors.ENDC}")
+    else:
+        print(test + f"{bcolors.FAIL} Failed{bcolors.ENDC}")
+
+
+print("\nQuestion 1:")
+check_cmd("kubectl get po mp-hello -o jsonpath='{.spec.containers[*].image}' | grep -w alpine | grep -w nginx | grep -w 'consul:1.8'", "Pod running 3 containers with correct images?")
+check_cmd(
+    "kubectl exec mp-hello -c $(kubectl get po mp-hello -o jsonpath='{.spec.containers[?(@.image=='alpine')].name}') -- sh -c 'ps | grep -v grep | grep sleep'", "Alpine pod is running sleep command?")

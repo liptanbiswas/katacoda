@@ -2,7 +2,7 @@
   "title": "CKAD Practice Challenge: Multi-Container Pods - 10%",
   "description": "Practice questions for Kubernetes Multi-container Pods",
   "difficulty": "Intermediate",
-  "time": "30 minutes",
+  "time": "10 minutes",
   "details": {
     "intro": {
       "text": "intro.md"
@@ -17,6 +17,11 @@
         "foreground": "step1-foreground.sh",
         "background": "step1-background.sh",
         "answer": "step1-solution.md"
+      },
+      {
+        "title": "Results",
+        "text": "step2.md",
+        "foreground": "step2-foreground.sh"
       }
     ],
     "assets": {
@@ -28,6 +33,11 @@
         },
         {
           "file": "upgrade.sh",
+          "target": "/usr/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "check",
           "target": "/usr/bin/",
           "chmod": "+x"
         }

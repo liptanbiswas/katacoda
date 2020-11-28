@@ -1,0 +1,54 @@
+#!/usr/bin/python3
+
+# These tests were initially written in bash but due to some change in Katacoda, they stopped working.
+# Migrated those bash to a python script.
+#
+import subprocess
+
+
+class bcolors:
+    OKGREEN = '\033[92m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+
+
+def check_cmd(command, test):
+    s = subprocess.run(command, shell=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    if s.returncode == 0:
+        print(test + f" {bcolors.OKGREEN}Passed{bcolors.ENDC}")
+    else:
+        print(test + f"{bcolors.FAIL} Failed{bcolors.ENDC}")
+
+
+print("\nQuestion 1:")
+check_cmd("kubectl get pod vader -o jsonpath='{.spec.containers[0].image}' | grep -q -w 'nginx'", "Pod vader is created with correct image?")
+check_cmd("kubectl get pod vader -o jsonpath='{.spec.containers[0].volumeMounts[?(@.name=='vader-vol')].mountPath}' | grep -q -w '/var/www/html'", "Volume is mounted at correct path?")
+
+print("\nQuestion 2:")
+check_cmd(
+    "kubectl get pvc maul-pvc -o jsonpath='{.status.phase}' | grep -q -w Bound", "PVC maul-pvc is successfully bound?")
+
+print("\nQuestion 3:")
+check_cmd(
+    "kubectl get pv sidious-pv -o jsonpath='{.spec.accessModes[0]}' | grep -q -w ReadWriteOnce", "PV sidious-pv has correct access modes?")
+check_cmd(
+    "kubectl get pv sidious-pv -o jsonpath='{.spec.capacity.storage}' | grep -q -w 200Mi", "PV sidious-pv has correct storage?")
+check_cmd(
+    "kubectl get pvc sidious-pvc -o jsonpath='{.status.phase}' | grep -q -w Bound", "PVC sidious-pvc is bound?")
+check_cmd(
+    "kubectl get po sidious -o jsonpath='{.spec.containers[0].volumeMounts[?(@.name=='sidious-vol')].mountPath}' | grep -q -w '/var/lib/mysql'", "Volume sidious-vol is correctly mounted?")
+check_cmd(
+    "kubectl get po sidious -o jsonpath='{.spec.volumes[?(@.name=='sidious-vol')].persistentVolumeClaim.claimName}' | grep -q -w 'sidious-pvc'", "Volume sidious-vol is using sidious-pvc?")
+check_cmd(
+    "kubectl get po sidious -o jsonpath='{.status.phase}' | grep -q -w 'Running'", "Pod is running?")
+
+print("\nQuestion 4:")
+check_cmd(
+    "kubectl get po dooku -o jsonpath='{.spec.containers[0].volumeMounts[?(@.name=='dooku-logs')].mountPath}' | grep -q -w '/var/log/dooku'", "Volume dooku-logs is mounted correctly?")
+check_cmd(
+    "kubectl get po dooku -o jsonpath='{.spec.containers[1].volumeMounts[?(@.name=='dooku-logs')].mountPath}' | grep -q -w '/var/log/dooku'", "Volume dooku-logs is mounted correctly?")
+check_cmd(
+    "kubectl get po dooku -o jsonpath='{.spec.volumes[?(@.name=='dooku-logs')].hostPath.path}' | grep -q -w '/data/dooku'", "Volume dooku-logs uses hostpath?")
+check_cmd(
+    "kubectl get po dooku -o jsonpath='{.status.phase}' | grep -q -w 'Running'", "Pod is running?")

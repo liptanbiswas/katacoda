@@ -1,0 +1,51 @@
+#!/usr/bin/python3
+import subprocess
+
+
+class bcolors:
+    OKGREEN = '\033[92m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+
+
+def check_cmd(command, test):
+    s = subprocess.run(command, shell=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    if s.returncode == 0:
+        print(test + f" {bcolors.OKGREEN}Passed{bcolors.ENDC}")
+    else:
+        print(test + f"{bcolors.FAIL} Failed{bcolors.ENDC}")
+
+
+print("\nQuestion 1:")
+check_cmd("kubectl get po myredis -o jsonpath='{.spec.containers[*].livenessProbe.initialDelaySeconds}' | grep -q -w 5", "Container has liveness probe with initialDelaySeconds?")
+check_cmd("kubectl get po myredis -o jsonpath='{.spec.containers[*].livenessProbe.exec.command}' | grep -q -w 'redis-cli'", "Liveness probe contains correct command?")
+check_cmd("kubectl get po myredis -o jsonpath='{.spec.containers[*].readinessProbe.initialDelaySeconds}' | grep -q -w 5", "Container has readiness probe with initialDelaySeconds?")
+check_cmd("kubectl get po myredis -o jsonpath='{.spec.containers[*].readinessProbe.exec.command}' | grep -q -w 'PING'", "Readiness probe contains correct command?")
+check_cmd("kubectl get po myredis -o jsonpath='{.status.containerStatuses[0].ready}' | grep -q -w 'true'", "Pod is ready?")
+
+print("\nQuestion 2:")
+check_cmd(
+    "kubectl get po httptest -o jsonpath='{.spec.containers[*].readinessProbe.httpGet.path}' | grep -q -w '/status/200'", "Pod has correct readyness probe defined?")
+check_cmd(
+    "kubectl get po httptest -o jsonpath='{.status.containerStatuses[0].ready}' | grep -q -w 'true'", "Pod is ready?")
+
+print("\nQuestion 3:")
+check_cmd(
+    "grep -q 'HOSTNAME=myenv' /root/myenv.log", "File /root/myenv.log has correct logs?")
+check_cmd(
+    "if kubectl get po -o jsonpath='{.items[*].metadata.name}' | grep -q -w myenv ; then exit 1; fi", "Pod is deleted?")
+
+print("\nQuestion 4:")
+check_cmd(
+    "kubectl get po tatooine -o jsonpath='{.spec.containers[0]}' | grep -q -w 'sleep'", "Pod tatooine is fixed?")
+check_cmd(
+    "kubectl get po tatooine -o jsonpath='{.status.containerStatuses[0].ready}' | grep -q -w 'true'", "Pod tatooine is running?")
+
+print("\nQuestion 5:")
+check_cmd(
+    "kubectl get po coruscant -o jsonpath='{.status.containerStatuses[0].ready}' | grep -q -w 'true'", "Pod coruscant is running?")
+
+print("\nQuestion 6:")
+check_cmd(
+    "grep -q -w dagobah /root/high-cpu.yaml", "File /root/high-cpu.yaml contains name of pod with highest cpu usages?")
