@@ -20,4 +20,4 @@ def check_cmd(command, test):
 print("\nQuestion 1:")
 check_cmd("kubectl get po mp-hello -o jsonpath='{.spec.containers[*].image}' | grep -w alpine | grep -w nginx | grep -w 'consul:1.8'", "Pod running 3 containers with correct images?")
 check_cmd(
-    "kubectl exec mp-hello -c $(kubectl get po mp-hello -o jsonpath='{.spec.containers[?(@.image=='alpine')].name}') -- sh -c 'ps | grep -v grep | grep sleep'", "Alpine pod is running sleep command?")
+    "kubectl exec mp-hello -c $(kubectl get po mp-hello -o jsonpath='{.spec.containers[?(@.image==\"alpine\")].name}') -- sh -c 'ps | grep -v grep | grep sleep'", "Alpine pod is running sleep command?")
