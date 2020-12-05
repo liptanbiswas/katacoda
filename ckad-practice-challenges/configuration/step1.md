@@ -6,5 +6,6 @@ Complete the following tasks.
 
 ---
 > Do NOT press *Continue* before the environment is ready. Otherwise, the resources will not be created.
+
 <br/>
 <br/>
