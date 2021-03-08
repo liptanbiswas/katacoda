@@ -1,3 +1,4 @@
 #!/bin/bash
 
-sleep 10 && upgrade.sh
+while [ ! -f /usr/bin/upgrade.sh ]; do clear; echo initializing; sleep 1; done
+upgrade.sh
