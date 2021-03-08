@@ -6,7 +6,7 @@
 - Understand ServiceAccounts
 
 ### Instructions
-- This practice environment runs on Kubernetes 1.19, current version of exam.
+- This practice environment runs on Kubernetes 1.20, current version of exam.
 - This is NOT a replica of actual exam and should be used for practice only.
 - The questions are NOT same as actual exam.
 - Successful completion of tasks can **verified** at the last step. You can also run `check` command anytime to verify your work.

@@ -61,7 +61,7 @@
     "assets": {
       "host01": [
         {
-          "file": "k8s-upgrade-1.19.sh",
+          "file": "k8s-install-1.20.sh",
           "target": "/usr/bin/",
           "chmod": "+x"
         },
@@ -82,6 +82,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "kubernetes-cluster-running:1.18"
+    "imageid": "kubernetes-cluster:1.18"
   }
 }
