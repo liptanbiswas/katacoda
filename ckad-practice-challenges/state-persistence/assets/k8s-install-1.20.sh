@@ -19,7 +19,9 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config >>/tmp/master-upgrade.l
 sudo chown $(id -u):$(id -g) $HOME/.kube/config >>/tmp/master-upgrade.log 2>&1
 
 # join the node
-kubeadm token create --print-join-command | ssh -tt node01 "${JOIN_NODE_CMD}" >>/tmp/node-upgrade.log 2>&1 &
+NODE_JOIN_CMD=$(kubeadm token create --print-join-command)
+NODE_JOIN_CMD_FULL="kubeadm reset -f;  ${NODE_JOIN_CMD} --ignore-preflight-errors=all"
+ssh -tt node01 "${NODE_JOIN_CMD_FULL}"  >>/tmp/node-upgrade.log 2>&1 &
 
 # Install CNI
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml >>/tmp/master-upgrade.log 2>&1
