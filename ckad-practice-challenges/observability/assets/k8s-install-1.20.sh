@@ -24,6 +24,6 @@ NODE_JOIN_CMD_FULL="kubeadm reset -f;  ${NODE_JOIN_CMD} --ignore-preflight-error
 ssh -tt node01 "${NODE_JOIN_CMD_FULL}"  >>/tmp/node-upgrade.log 2>&1 &
 
 # Install CNI
-kubectl apply -f https://docs.projectcalico.org/manifests/canal.yaml >>/tmp/master-upgrade.log 2>&1
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')" >>/tmp/master-upgrade.log 2>&1
 
 touch /root/.kube/installed
