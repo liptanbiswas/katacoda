@@ -29,11 +29,11 @@ print("\nQuestion 2:")
 check_cmd(
     "kubectl exec ig-11 -- curl greef:8080 --connect-timeout 1", "Pod ig-11 is exposed as a service greef?")
 check_cmd(
-    "kubectl get services greef -o jsonpath='{.spec.type}' | grep -q -w ClusterIP", "Service greef is ClusterIP type?")
+    "kubectl get services greef -o jsonpath='{.spec.type}' | grep -q -w ClusterIP", "Service greef is of ClusterIP type?")
 
 print("\nQuestion 3:")
 check_cmd(
-    "kubectl get service cara -o jsonpath='{.spec.ports[0].nodePort}' | grep -q -w 31888", "Service cara as NodePort exposed?")
+    "kubectl get service cara -o jsonpath='{.spec.ports[0].nodePort}' | grep -q -w 31888", "Service cara has NodePort exposed?")
 check_cmd(
     "curl localhost:31888 --connect-timeout 2", "Service is available via NodePort?")
 
